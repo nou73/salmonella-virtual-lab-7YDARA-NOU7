@@ -507,3 +507,29 @@ canvas,
 svg {
   max-width: 100%;
 }
+/* Keep the lab hidden behind the introduction screens */
+body:has(#s_in:not([hidden])) main > #top,
+body:has(#s_in:not([hidden])) main > h1,
+body:has(#s_in:not([hidden])) main > p.s,
+body:has(#s_in:not([hidden])) main > section.c,
+body:has(#s_in:not([hidden])) main > #cap,
+body:has(#s_in:not([hidden])) main > section.lab,
+body:has(#s_in:not([hidden])) main > #rep,
+
+body:has(#s_th:not([hidden])) main > #top,
+body:has(#s_th:not([hidden])) main > h1,
+body:has(#s_th:not([hidden])) main > p.s,
+body:has(#s_th:not([hidden])) main > section.c,
+body:has(#s_th:not([hidden])) main > #cap,
+body:has(#s_th:not([hidden])) main > section.lab,
+body:has(#s_th:not([hidden])) main > #rep,
+
+body:has(#s_sc:not([hidden])) main > #top,
+body:has(#s_sc:not([hidden])) main > h1,
+body:has(#s_sc:not([hidden])) main > p.s,
+body:has(#s_sc:not([hidden])) main > section.c,
+body:has(#s_sc:not([hidden])) main > #cap,
+body:has(#s_sc:not([hidden])) main > section.lab,
+body:has(#s_sc:not([hidden])) main > #rep {
+  display: none !important;
+}
