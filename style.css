@@ -533,3 +533,25 @@ body:has(#s_sc:not([hidden])) main > section.lab,
 body:has(#s_sc:not([hidden])) main > #rep {
   display: none !important;
 }
+/* FINAL FIX: isolate intro pages from the lab */
+body:has(#s_in:not([hidden])) main > :not(.scr):not(#pageNav),
+body:has(#s_th:not([hidden])) main > :not(.scr):not(#pageNav),
+body:has(#s_sc:not([hidden])) main > :not(.scr):not(#pageNav) {
+  display: none !important;
+}
+
+body:has(#s_in:not([hidden])),
+body:has(#s_th:not([hidden])),
+body:has(#s_sc:not([hidden])) {
+  overflow: hidden !important;
+}
+
+.scr {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+}
